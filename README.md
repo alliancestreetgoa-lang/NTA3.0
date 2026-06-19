@@ -4,7 +4,7 @@ Marketing website for **NTA Group**, a UAE-based international trading house
 dealing in energy, petrochemical and agricultural commodities.
 
 Built as a **static site** (HTML + CSS + vanilla JavaScript) — no build step,
-no dependencies, deployable anywhere.
+no dependencies, deployable anywhere. Three pages: **Home**, **About**, **Contact**.
 
 ## Products showcased
 
@@ -30,17 +30,22 @@ load correctly.
 ## Project structure
 
 ```
-index.html              # single-page site (all sections)
+index.html              # home (hero, products, why, reach, CTA)
+about.html              # company story, mission/vision, values
+contact.html            # contact details + enquiry form
 assets/css/styles.css   # all styling + responsive rules
 assets/js/main.js       # nav, scroll reveal, counters, contact form
-assets/images/          # product photos (and your logo)
+assets/images/          # product photos + logo.svg
+.github/workflows/      # GitHub Pages auto-deploy
 ```
+
+> Header/footer markup is repeated in all three HTML files — edit them together.
 
 ## Customising
 
 | What | Where |
 |------|-------|
-| Logo | `assets/images/` → add `logo.png`, then swap the `.brand-mark` span in `index.html` for an `<img>` (see comment in the header) |
+| Logo | Replace `assets/images/logo.svg` (or change the `<img class="brand-logo">` src in all three pages) |
 | Brand colours | CSS variables at the top of `assets/css/styles.css` (`--green-800`, `--gold`, …) |
 | Product text / images | the `.product-card` blocks in `index.html` |
 | Contact details | the `.contact-details` list + `mailto:` in `index.html` / `main.js` |
@@ -50,8 +55,13 @@ assets/images/          # product photos (and your logo)
 
 ## Deploying
 
-Any static host works (GitHub Pages, Netlify, Cloudflare Pages, or a standard
-web server). For GitHub Pages, serve the repository root on the default branch.
+A GitHub Actions workflow (`.github/workflows/deploy.yml`) auto-deploys to
+**GitHub Pages** on every push to `main` or the working branch. Enable it once:
+**repo Settings → Pages → Source: GitHub Actions**. The site then publishes at
+`https://<user>.github.io/NTA3.0/`.
+
+Any other static host also works (Netlify, Cloudflare Pages, or a standard web
+server) — just serve the repository root.
 
 ## Contact form
 

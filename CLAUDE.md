@@ -4,11 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A single-page marketing website for **NTA Group**, a UAE-based international
-commodity trading house (energy, petrochemicals, agriculture). It is a **static
-site** with **no build system, no package manager, and no dependencies** — just
-`index.html`, one CSS file, and one vanilla JS file. There is nothing to compile
-or install.
+A marketing website for **NTA Group**, a UAE-based international commodity
+trading house (energy, petrochemicals, agriculture). It is a **static site**
+with **no build system, no package manager, and no dependencies** — three HTML
+pages, one CSS file, and one vanilla JS file. There is nothing to compile or
+install.
 
 ## Running & previewing
 
@@ -21,18 +21,28 @@ assets resolve correctly. There is no test suite, linter, or CI configured.
 
 ## Architecture
 
-Everything renders from three files:
+Three HTML pages share one stylesheet and one script:
 
-- `index.html` — the entire page. Sections in order: header → hero → stats →
-  about → products → why → reach → contact → footer. Section order in the file
-  matches visual order and matches the in-page nav anchors (`#about`, `#products`,
-  `#why`, `#reach`, `#contact`).
+- `index.html` — home. Sections: header → hero → stats → about → products → why
+  → reach → contact CTA band → footer. The products `#products`, why `#why`, and
+  reach `#reach` ids are the in-page nav anchors linked from other pages as
+  `index.html#products` etc.
+- `about.html` — company story, mission/vision, values.
+- `contact.html` — contact cards + the full enquiry form.
 - `assets/css/styles.css` — all styling. **Design tokens live in `:root`** at
   the top (colours, radius, shadows, fonts). Change the palette there, not inline.
   Responsive breakpoints are at the bottom (`920px`, `560px`).
 - `assets/js/main.js` — one IIFE handling: sticky-header scroll state, the mobile
   menu toggle, `IntersectionObserver`-based scroll reveals, animated stat
-  counters, and the contact form. No framework.
+  counters, and the contact form. No framework. The same file loads on every page.
+
+**Header and footer markup is duplicated** across the three HTML files (there is
+no templating). When you change the nav, logo, or footer, **update all three
+pages** to keep them in sync.
+
+The logo is `assets/images/logo.svg` (a designed emblem), referenced as an
+`<img class="brand-logo">` in every header and footer. To use a different logo,
+replace that file or swap the `<img>` src — in all three pages.
 
 ## Conventions that matter
 
@@ -49,9 +59,17 @@ Everything renders from three files:
 - **Products:** each product is a `.product-card` with a numbered badge
   (`.product-num`, 01–06) and an image in `assets/images/product-*.png`. Keep the
   number/image/title in sync if reordering.
-- **Brand mark:** the logo is currently a text `.brand-mark` ("NTA"). A real
-  logo goes in `assets/images/` and replaces the span (an HTML comment in the
-  header marks the spot). It appears in both the header and the footer.
+- **Header colour inversion needs a dark backdrop:** because the header is
+  transparent until scrolled, every page starts with a dark hero (`.hero` on
+  home, `.page-hero` on inner pages) so the white nav text is legible. A new page
+  must begin with one of these, or the header text will be invisible at the top.
+
+## Deployment
+
+`.github/workflows/deploy.yml` publishes the site to **GitHub Pages** on push to
+`main` or `claude/claude-md-docs-b020qn` (whole repo root is the artifact).
+Pages must be enabled once in the repo settings (Settings → Pages → Source:
+GitHub Actions).
 
 ## Known placeholders (replace with real data, don't invent)
 
