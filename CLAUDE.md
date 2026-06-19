@@ -40,9 +40,12 @@ Three HTML pages share one stylesheet and one script:
 no templating). When you change the nav, logo, or footer, **update all three
 pages** to keep them in sync.
 
-The logo is `assets/images/logo.svg` (a designed emblem), referenced as an
-`<img class="brand-logo">` in every header and footer. To use a different logo,
-replace that file or swap the `<img>` src — in all three pages.
+The logo is `assets/images/logo.png` (the official NTA Group wordmark, white
+background removed to transparency). It is shown inside a white `.brand-chip`
+in every header and footer so its blue/green/orange stays legible over the dark
+green backgrounds. Because the wordmark already reads "NTA GROUP", there is no
+separate brand text. To change the logo, replace that file (transparent PNG/SVG
+recommended); to resize, adjust `.brand-logo` height in the CSS.
 
 ## Conventions that matter
 

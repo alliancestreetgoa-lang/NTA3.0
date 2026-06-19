@@ -35,7 +35,7 @@ about.html              # company story, mission/vision, values
 contact.html            # contact details + enquiry form
 assets/css/styles.css   # all styling + responsive rules
 assets/js/main.js       # nav, scroll reveal, counters, contact form
-assets/images/          # product photos + logo.svg
+assets/images/          # product photos + logo.png
 .github/workflows/      # GitHub Pages auto-deploy
 ```
 
@@ -45,7 +45,7 @@ assets/images/          # product photos + logo.svg
 
 | What | Where |
 |------|-------|
-| Logo | Replace `assets/images/logo.svg` (or change the `<img class="brand-logo">` src in all three pages) |
+| Logo | Replace `assets/images/logo.png` (transparent background recommended); resize via `.brand-logo` height in CSS |
 | Brand colours | CSS variables at the top of `assets/css/styles.css` (`--green-800`, `--gold`, …) |
 | Product text / images | the `.product-card` blocks in `index.html` |
 | Contact details | the `.contact-details` list + `mailto:` in `index.html` / `main.js` |
