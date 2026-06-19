@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=18" />
 </head>
 <body>
 
@@ -46,52 +46,117 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="container hero-inner">
-      <p class="eyebrow reveal">United Arab Emirates · Global Trade</p>
-      <h1 class="reveal">Connecting Global Resources<br />with Reliable Delivery</h1>
-      <p class="hero-lead reveal">
-        NTA Group is a UAE-based international trading house dealing in energy,
-        petrochemicals and agricultural commodities — moving essential resources
-        across continents with integrity, scale and precision.
-      </p>
-      <div class="hero-actions reveal">
-        <a href="#products" class="btn btn-primary">Explore Our Products</a>
-        <a href="#contact" class="btn btn-ghost">Partner With Us</a>
-      </div>
+    <div class="container hero-head">
+      <h1 class="reveal"><span class="hl-green">Powering</span> <span class="hl-navy">Industries.</span><br /><span class="hl-green">Nourishing</span> <span class="hl-navy">Lives.</span></h1>
+      <p class="hero-lead reveal">Your trusted partner in global trading and supply of energy, industrial, agricultural and essential commodities.</p>
     </div>
-    <a href="#stats" class="scroll-cue" aria-label="Scroll down"><span></span></a>
-  </section>
 
-  <!-- ============ STATS BAR ============ -->
-  <section class="stats" id="stats">
-    <div class="container stats-grid">
-      <div class="stat reveal"><span class="stat-num" data-count="6">6</span><span class="stat-label">Core Commodity Lines</span></div>
-      <div class="stat reveal"><span class="stat-num" data-count="20">20</span><span class="stat-suffix">+</span><span class="stat-label">Global Markets Served</span></div>
-      <div class="stat reveal"><span class="stat-num" data-count="100">100</span><span class="stat-suffix">%</span><span class="stat-label">Quality Assured Supply</span></div>
-      <div class="stat reveal"><span class="stat-num">24/7</span><span class="stat-label">Trade &amp; Logistics Support</span></div>
+    <!-- Angled commodity panorama -->
+    <div class="hero-strip" aria-hidden="true">
+      <div class="hero-slice" style="background-image:url('assets/images/product-fertilizers.png')"></div>
+      <div class="hero-slice" style="background-image:url('assets/images/product-lng.png')"></div>
+      <div class="hero-slice" style="background-image:url('assets/images/product-refined-oil.png')"></div>
+      <div class="hero-slice" style="background-image:url('assets/images/product-crude-oil.png')"></div>
+      <div class="hero-slice" style="background-image:url('assets/images/product-petrochemicals.png')"></div>
+      <div class="hero-slice" style="background-image:url('assets/images/product-grains.png')"></div>
+    </div>
+
+    <!-- Six commodity cards -->
+    <div class="container">
+      <div class="hero-cards">
+        <a href="#fertilizers" class="hero-card c-green reveal">
+          <span class="hc-num">01</span>
+          <span class="hc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-4 3-8 7-9 0 4-3 8-7 9"/><path d="M11 20c0-5 3-9 8-10"/></svg>
+          </span>
+          <h3>Chemical Fertilizers Trading</h3>
+        </a>
+        <a href="#lng" class="hero-card c-blue reveal">
+          <span class="hc-num">02</span>
+          <span class="hc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3 2-4 .5 1 1.5 1.5 2 1 0-2-1-4 1-6Z"/></svg>
+          </span>
+          <h3>Industrial &amp; Liquefied Natural Gas Trading</h3>
+        </a>
+        <a href="#refined-oil" class="hero-card c-orange reveal">
+          <span class="hc-num">03</span>
+          <span class="hc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="16" rx="1.5"/><path d="M6 9h12M6 15h12M10 4v16"/></svg>
+          </span>
+          <h3>Trading Refined Oil Products Abroad</h3>
+        </a>
+        <a href="#crude-oil" class="hero-card c-dark reveal">
+          <span class="hc-num">04</span>
+          <span class="hc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M5 20v-6l8-3 2 4"/><path d="M13 11l4-2 3 6"/><path d="M7 14v-3"/></svg>
+          </span>
+          <h3>Crude Oil Trading Abroad</h3>
+        </a>
+        <a href="#petrochemicals" class="hero-card c-teal reveal">
+          <span class="hc-num">05</span>
+          <span class="hc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18V10l-5 3V10l-5 3V6L3 9Z"/><path d="M7 21v-4M11 21v-4M15 21v-4"/></svg>
+          </span>
+          <h3>Petrochemicals Trading</h3>
+        </a>
+        <a href="#grains" class="hero-card c-gold reveal">
+          <span class="hc-num">06</span>
+          <span class="hc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M12 7c-2-1-4-1-5 0 1 2 3 2 5 1Zm0 0c2-1 4-1 5 0-1 2-3 2-5 1Z"/><path d="M12 12c-2-1-4-1-5 0 1 2 3 2 5 1Zm0 0c2-1 4-1 5 0-1 2-3 2-5 1Z"/></svg>
+          </span>
+          <h3>Grains, Cereals &amp; Legumes Trading</h3>
+        </a>
+      </div>
+
+      <!-- Feature strip -->
+      <div class="hero-features reveal" id="stats">
+        <div class="hf-item">
+          <span class="hf-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg>
+          </span>
+          <div><strong>Global Sourcing</strong><span>Strong network across the world</span></div>
+        </div>
+        <div class="hf-item">
+          <span class="hf-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6Z"/><path d="M9 12l2 2 4-4"/></svg>
+          </span>
+          <div><strong>Quality Assured</strong><span>International standards you can trust</span></div>
+        </div>
+        <div class="hf-item">
+          <span class="hf-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12l3-3 3 2 4-4"/><path d="M2 10l4-3 5 4-2 2-3-2"/><path d="M22 11l-4 4-3-2"/></svg>
+          </span>
+          <div><strong>Reliable Partner</strong><span>Committed to long-term partnerships</span></div>
+        </div>
+        <div class="hf-item">
+          <span class="hf-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v9H2Z"/><path d="M13 9h4l3 3v3h-7Z"/><circle cx="6" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg>
+          </span>
+          <div><strong>Timely Delivery</strong><span>Efficient logistics for on-time supply</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ============ ABOUT ============ -->
   <section class="about section" id="about">
     <div class="container about-grid">
-      <div class="about-copy reveal">
-        <p class="section-eyebrow">About NTA Group</p>
-        <h2 class="section-title">A trusted name in international commodity trading</h2>
-        <p>
+      <div class="about-copy">
+        <p class="section-eyebrow reveal">About NTA Group</p>
+        <h2 class="section-title reveal">A trusted name in international commodity trading</h2>
+        <p class="reveal">
           Headquartered in the United Arab Emirates, NTA Group operates at the
           crossroads of global trade. We source, supply and distribute essential
           commodities — from chemical fertilizers and grains that sustain
           agriculture, to crude oil, refined products, natural gas and
           petrochemicals that power industry.
         </p>
-        <p>
+        <p class="reveal">
           Built on transparency, compliance and long-term relationships, we
           serve producers, refiners, distributors and governments with dependable
           supply, competitive pricing and end-to-end logistics.
         </p>
-        <ul class="about-points">
+        <ul class="about-points reveal">
           <li>UAE-based with an international trading network</li>
           <li>Diversified portfolio across energy &amp; agriculture</li>
           <li>Compliance-first, relationship-driven approach</li>
@@ -131,72 +196,128 @@
         <p class="section-sub">A diversified trading portfolio across energy and agriculture, delivered with global standards of quality and compliance.</p>
       </div>
 
-      <div class="product-grid">
-        <article class="product-card reveal">
-          <div class="product-media">
+      <div class="product-features">
+
+        <!-- 01 Fertilizers -->
+        <article class="product-feature reveal" id="fertilizers">
+          <div class="pf-media">
             <img src="assets/images/product-fertilizers.png" alt="Chemical Fertilizers Trading" loading="lazy" />
-            <span class="product-num">01</span>
+            <span class="pf-num">01</span>
           </div>
-          <div class="product-body">
+          <div class="pf-body">
+            <p class="pf-eyebrow">Agriculture</p>
             <h3>Chemical Fertilizers Trading</h3>
-            <p>Supplying high-grade nitrogen, phosphate and potash-based fertilizers to support productive, sustainable agriculture worldwide.</p>
+            <p>NTA Group sources and supplies high-grade mineral fertilizers that raise yields and replenish soils for farms and agri-businesses worldwide. We connect leading producers with distributors, cooperatives and government buyers, handling contract negotiation, quality assurance and bulk or bagged delivery end to end.</p>
+            <ul class="pf-list">
+              <li>Nitrogen: urea, UAN, ammonium nitrate and CAN</li>
+              <li>Phosphates: DAP, MAP, TSP and rock phosphate</li>
+              <li>Potash: MOP and SOP for potassium-demanding crops</li>
+              <li>NPK blends and specialty water-soluble fertilizers</li>
+              <li>Bulk vessel and bagged (50&nbsp;kg / jumbo) supply options</li>
+            </ul>
           </div>
         </article>
 
-        <article class="product-card reveal">
-          <div class="product-media">
+        <!-- 02 LNG -->
+        <article class="product-feature reverse reveal" id="lng">
+          <div class="pf-media">
             <img src="assets/images/product-lng.png" alt="Industrial and Liquefied Natural Gas Trading" loading="lazy" />
-            <span class="product-num">02</span>
+            <span class="pf-num">02</span>
           </div>
-          <div class="product-body">
+          <div class="pf-body">
+            <p class="pf-eyebrow">Energy</p>
             <h3>Industrial &amp; Liquefied Natural Gas Trading</h3>
-            <p>Reliable LNG and industrial gas supply, backed by safe handling and dependable marine and overland logistics.</p>
+            <p>We trade liquefied natural gas and industrial gases as a cleaner-burning energy source for power generation, heating and manufacturing. Backed by strict safe-handling protocols and dependable marine and overland logistics, we link gas producers and terminals with industrial and utility offtakers.</p>
+            <ul class="pf-list">
+              <li>Liquefied Natural Gas (LNG): spot and term cargoes</li>
+              <li>Liquefied Petroleum Gas (LPG): propane and butane</li>
+              <li>Industrial gases for manufacturing and processing</li>
+              <li>Cryogenic carrier and ISO-tank logistics</li>
+              <li>Regasification and terminal coordination</li>
+            </ul>
           </div>
         </article>
 
-        <article class="product-card reveal">
-          <div class="product-media">
+        <!-- 03 Refined Oil -->
+        <article class="product-feature reveal" id="refined-oil">
+          <div class="pf-media">
             <img src="assets/images/product-refined-oil.png" alt="Trading Refined Oil Products Abroad" loading="lazy" />
-            <span class="product-num">03</span>
+            <span class="pf-num">03</span>
           </div>
-          <div class="product-body">
+          <div class="pf-body">
+            <p class="pf-eyebrow">Energy</p>
             <h3>Trading Refined Oil Products Abroad</h3>
-            <p>International trade of gasoline, diesel, jet fuel and fuel oil — connecting refiners with markets across the globe.</p>
+            <p>NTA Group trades the full slate of refined petroleum products, moving fuels from refineries to the markets that depend on them. With secure contracts, independent inspection at every stage and flexible shipping, we keep transport, industry and power dependably supplied.</p>
+            <ul class="pf-list">
+              <li>Gasoline (PMS) and gasoil / diesel (AGO)</li>
+              <li>Jet fuel (Jet&nbsp;A-1) and kerosene</li>
+              <li>Fuel oil (HFO / LSFO) and bitumen</li>
+              <li>Base oils and lubricants</li>
+              <li>Certified to international product specifications</li>
+            </ul>
           </div>
         </article>
 
-        <article class="product-card reveal">
-          <div class="product-media">
+        <!-- 04 Crude Oil -->
+        <article class="product-feature reverse reveal" id="crude-oil">
+          <div class="pf-media">
             <img src="assets/images/product-crude-oil.png" alt="Crude Oil Trading Abroad" loading="lazy" />
-            <span class="product-num">04</span>
+            <span class="pf-num">04</span>
           </div>
-          <div class="product-body">
+          <div class="pf-body">
+            <p class="pf-eyebrow">Energy</p>
             <h3>Crude Oil Trading Abroad</h3>
-            <p>Sourcing and supplying crude oil grades internationally with secure contracts and efficient shipping arrangements.</p>
+            <p>We source and supply crude oil grades on the international market, connecting producers and refiners through secure contracts and efficient shipping. Our trading desk manages price exposure, documentation and vessel scheduling from origin to discharge.</p>
+            <ul class="pf-list">
+              <li>Light, medium and heavy crude grades</li>
+              <li>Sweet and sour crude streams</li>
+              <li>FOB and CIF delivery terms</li>
+              <li>Tanker chartering and voyage management</li>
+              <li>SGS / independent cargo inspection</li>
+            </ul>
           </div>
         </article>
 
-        <article class="product-card reveal">
-          <div class="product-media">
+        <!-- 05 Petrochemicals -->
+        <article class="product-feature reveal" id="petrochemicals">
+          <div class="pf-media">
             <img src="assets/images/product-petrochemicals.png" alt="Petrochemicals Trading" loading="lazy" />
-            <span class="product-num">05</span>
+            <span class="pf-num">05</span>
           </div>
-          <div class="product-body">
+          <div class="pf-body">
+            <p class="pf-eyebrow">Industry</p>
             <h3>Petrochemicals Trading</h3>
-            <p>Trading a broad range of petrochemical products and feedstocks that serve manufacturing and industry worldwide.</p>
+            <p>NTA Group trades a broad range of petrochemical products and feedstocks that form the building blocks of modern manufacturing, from plastics and packaging to textiles and coatings. We connect producers with industrial buyers across global markets.</p>
+            <ul class="pf-list">
+              <li>Polymers: polyethylene (PE), polypropylene (PP), PVC</li>
+              <li>Aromatics: benzene, toluene and xylene</li>
+              <li>Olefins: ethylene and propylene</li>
+              <li>Methanol, MEG and industrial solvents</li>
+              <li>Bulk, FCL and ISO-tank supply</li>
+            </ul>
           </div>
         </article>
 
-        <article class="product-card reveal">
-          <div class="product-media">
+        <!-- 06 Grains -->
+        <article class="product-feature reverse reveal" id="grains">
+          <div class="pf-media">
             <img src="assets/images/product-grains.png" alt="Grains, Cereals and Legumes Trading" loading="lazy" />
-            <span class="product-num">06</span>
+            <span class="pf-num">06</span>
           </div>
-          <div class="product-body">
+          <div class="pf-body">
+            <p class="pf-eyebrow">Agriculture</p>
             <h3>Grains, Cereals &amp; Legumes Trading</h3>
-            <p>Reliable supply and global quality across wheat, maize, rice, pulses and legumes for food security and industry.</p>
+            <p>We supply grains, cereals and legumes that underpin food security and industry, sourcing dependable volumes at consistent quality. From staple cereals to protein-rich pulses, we serve millers, processors, importers and government reserves.</p>
+            <ul class="pf-list">
+              <li>Wheat, maize (corn) and barley</li>
+              <li>Rice: long-grain, parboiled and basmati</li>
+              <li>Soybeans and soybean meal</li>
+              <li>Pulses: lentils, chickpeas, beans and peas</li>
+              <li>Bulk vessel and containerised, quality inspected</li>
+            </ul>
           </div>
         </article>
+
       </div>
     </div>
   </section>
